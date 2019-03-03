@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+<!--
+bean配置
+class: bean的全类名,通过反射的方式在IOC容器中创建Bean,所以要求Bean中必须有无参数的构造器
+id:标识容器中bean,id是唯一的.
+
+-->
+    <bean id="helloWorld" class="com.atguigu.spring.beans.helloWorld.HelloWorld">
+        <property name="name2" value="Spring"></property>
+    </bean>
+
+    <!-- 通过构造方法来配置bean的属性
+        可以使用参数的顺序和类型来区分重载的构造器
+        如果不指定属性的类型的话,重载的构造器默认都是按照顺序来匹配的,如果适合的话,就使用相应的构造器
+    -->
+    <bean id="car" class="com.atguigu.spring.beans.helloWorld.Car">
+        <constructor-arg value="Audi" index="0"></constructor-arg>
+        <constructor-arg value="Shanghai" index="1"></constructor-arg>
+        <constructor-arg value="300" type="double"></constructor-arg>
+    </bean>
+
+    <bean id="car1" class="com.atguigu.spring.beans.helloWorld.Car">
+        <constructor-arg value="Baoma" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="Beijing" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="240" type="int"></constructor-arg>
+    </bean>
+
+    <bean id="person" class="com.atguigu.spring.beans.helloWorld.Person">
+    <property name="name" value="Tom"></property>
+    <property name="age" value="24"></property>
+    <!-- 可以使用property 的ref属性来建立bean之间的应用关系-->
+    <!--<property name="car" ref="car"></property>-->
+
+    <!--<property name="car">-->
+    <!--<ref bean="car"></ref>-->
+    <!--</property>-->
+        <!--内部bean,不能被外部引用,只能在内部使用-->
+        <property name="car">
+            <bean class="com.atguigu.spring.beans.helloWorld.Car">
+                <constructor-arg value="Ford"></constructor-arg>
+                <constructor-arg value="Changan"></constructor-arg>
+                <constructor-arg value="200000" type="double"></constructor-arg>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="person2" class="com.atguigu.spring.beans.helloWorld.Person">
+        <constructor-arg value="Tom11"></constructor-arg>
+        <constructor-arg value="24"></constructor-arg>
+        <constructor-arg ref="car"></constructor-arg>
+    </bean>
+    <!--测试集合属性-->
+    <bean id="person3" class="com.atguigu.spring.beans.collection.Person">
+        <property name="name" value="Mike"></property>
+        <property name="age" value="27"></property>
+        <property name="cars">
+            <!-- 使用list节点为List的属性赋值-->
+            <list>
+
+                <!--使用内部bean-->
+                <bean class="com.atguigu.spring.beans.helloWorld.Car">
+                    <constructor-arg value="Ford"></constructor-arg>
+                    <constructor-arg value="Changan"></constructor-arg>
+                    <constructor-arg value="200000" type="double"></constructor-arg>
+                </bean>
+
+                <ref bean="car"></ref>
+                <ref bean="car1"></ref>
+            </list>
+        </property>
+
+    </bean>
+
+    <!--配置单例集合bean,以供多个bean进行引用,需要导入util命名空间-->
+    <util:list id="cars">
+        <ref bean="car"/>
+        <ref bean="car1"/>
+    </util:list>
+
+    <bean id="person4" class="com.atguigu.spring.beans.collection.Person">
+        <property name="name" value="Jack"/>
+        <property name="age" value="29"/>
+        <property name="cars" ref="cars"/>
+    </bean>
+    <!--通过p命名空间为bean的属性赋值,需要先导入p命名空间,相对于传统的配置方法更加简洁-->
+    <bean id="person5" class="com.atguigu.spring.beans.collection.Person"
+          p:age="30" p:name="Queen" p:cars-ref="cars"/>
+</beans>
