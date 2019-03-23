@@ -1,0 +1,160 @@
+TD {
+	FONT-SIZE: 12px
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+.p1 {
+	FONT-SIZE: 12px
+}
+P {
+	FONT-SIZE: 12px; LINE-HEIGHT: 130%
+}
+DIV {
+	FONT-SIZE: 12px; LINE-HEIGHT: 130%
+}
+.p2 {
+	FONT-SIZE: 12px; LINE-HEIGHT: 130%
+}
+.vip {
+	COLOR: #ffffff; FONT-SIZE: 12px
+}
+.p3 {
+	FONT-SIZE: 14px
+}
+.p4 {
+	FONT-SIZE: 14px; LINE-HEIGHT: 130%
+}
+.p5 {
+	FONT-FAMILY: arial; FONT-SIZE: 10px
+}
+.p6 {
+	LINE-HEIGHT: 160%
+}
+.p7 {
+	LINE-HEIGHT: 180%
+}
+.hot {
+	COLOR: #ff3300
+}
+A:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+A.lb:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+A.lb:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+A.no:link {
+	COLOR: black
+}
+A.no:visited {
+	COLOR: black
+}
+A.no:hover {
+	COLOR: #ff0000; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.14no:link {
+	COLOR: black
+}
+A.14no:visited {
+	COLOR: black
+}
+A.14no:hover {
+	COLOR: #ff0000; FONT-SIZE: 14px; TEXT-DECORATION: none
+}
+A.lg:link {
+	COLOR: #717171
+}
+A.lg:visited {
+	COLOR: #717171
+}
+A.read:visited {
+	COLOR: #ff0000
+}
+A:hover {
+	COLOR: #999999; TEXT-DECORATION: none
+}
+A.lb:hover {
+	COLOR: #999999; TEXT-DECORATION: none
+}
+.pw {
+	COLOR: white
+}
+A.lw:link {
+	COLOR: white
+}
+A.lw:visited {
+	COLOR: white
+}
+A.ch:link {
+	COLOR: #697111
+}
+A.ch:visited {
+	COLOR: #697111
+}
+.sinput {
+	BACKGROUND-COLOR: #cccccc; BORDER-BOTTOM: 1px ridge; BORDER-LEFT: #ffffff 1px ridge; BORDER-RIGHT: 1px ridge; BORDER-TOP: #ffffff 1px ridge
+}
+.ring {
+	COLOR: #000066; FONT-FAMILY: webdings; FONT-SIZE: 12px
+}
+.redbj {
+	BACKGROUND-ATTACHMENT: fixed; BACKGROUND-COLOR: #993333; BACKGROUND-POSITION: center center; COLOR: #ffffff; FONT-SIZE: 12px
+}
+A.read:link {
+	COLOR: #ff0000; FONT-SIZE: 12px
+}
+A.read:hover {
+	COLOR: #666666; FONT-SIZE: 12px
+}
+A.no:link {
+	FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.no:visited {
+	FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.14no:link {
+	FONT-SIZE: 14px; TEXT-DECORATION: none
+}
+A.14no:visited {
+	FONT-SIZE: 14px; TEXT-DECORATION: none
+}
+A.lb:hover {
+	TEXT-DECORATION: none
+}
+A.lc:link {
+	TEXT-DECORATION: none
+}
+dbt {
+	COLOR: #003366; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.dbt {
+	COLOR: #4a5a6b; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.dbt2 {
+	COLOR: #003366; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.2-sxzy {
+	BORDER-BOTTOM: #e1ebf5 1px solid; BORDER-LEFT: #e1ebf5 1px solid; BORDER-RIGHT: #e1ebf5 1px solid; BORDER-TOP: #e1ebf5 1px solid
+}
+.2-sxzy-xu {
+	BORDER-BOTTOM: #cccccc 1px dashed; BORDER-LEFT: #cccccc 1px dashed; BORDER-RIGHT: #cccccc 1px dashed; BORDER-TOP: #cccccc 1px dashed
+}
+.f12150 {
+	FONT-SIZE: 12px; LINE-HEIGHT: 150%
+}
+.lh {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px; TEXT-DECORATION: none
+}
+.p4{
+	line-height: 25px;
+}
+.b2 {  font-size: 12px; line-height: 16px; color: #000000}
